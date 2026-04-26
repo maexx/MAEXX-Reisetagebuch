@@ -1,1 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>was bisher geschah</title>
+</head>
+<body>
+  <h1>🌍 </h1>
+  <p>pyrenäen 2026 con bicicleta.</p>
 
+  <h2>Letzte Einträge</h2>
+  <ul>
+    <li><a href="tag1.html">Tag 1 – Ankunft</a></li>
+  </ul>
+</body>
+</html>
