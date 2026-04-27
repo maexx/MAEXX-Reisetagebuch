@@ -6,6 +6,24 @@
 
   <style>
 
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+    
 .gallery img {
   cursor: pointer;
 }
@@ -104,7 +122,19 @@
 </head>
 
 <script>
+let images = [
+  "images/IMG_1344.PNG",
+  "images/IMG_3966.jpeg",
+  "images/IMG_3967.jpeg",
+  "images/IMG_3968.jpeg",
+  "images/IMG_3970.jpeg",
+  "images/IMG_3974.jpeg"
+];
+
+let currentIndex = 0;
+
 function openLightbox(src) {
+  currentIndex = images.indexOf(src.split("/").pop().startsWith("IMG") ? "images/" + src.split("/").pop() : src);
   document.getElementById("lightbox").style.display = "flex";
   document.getElementById("lightbox-img").src = src;
 }
@@ -112,13 +142,44 @@ function openLightbox(src) {
 function closeLightbox() {
   document.getElementById("lightbox").style.display = "none";
 }
+
+function nextImage() {
+  currentIndex = (currentIndex + 1) % images.length;
+  document.getElementById("lightbox-img").src = images[currentIndex];
+}
+
+function prevImage() {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  document.getElementById("lightbox-img").src = images[currentIndex];
+}
 </script>
   
 <body>
 
+ <body>
+
   <div class="container">
     <h1>Tag 1 – Ankunft</h1>
 
+    <!-- 📸 Galerie -->
+    <div class="gallery">
+      <img src="images/IMG_1344.PNG" onclick="openLightbox(this.src)">
+      <img src="images/IMG_3966.jpeg" onclick="openLightbox(this.src)">
+      ...
+    </div>
+
+    <!-- 🔥 HIER kommt die Lightbox rein -->
+    <div id="lightbox" onclick="closeLightbox()">
+      <span class="close">&times;</span>
+
+      <span class="prev" onclick="event.stopPropagation(); prevImage()">❮</span>
+      <img id="lightbox-img">
+      <span class="next" onclick="event.stopPropagation(); nextImage()">❯</span>
+    </div>
+
+  </div>
+
+</body>
  
 <div class="gallery">
   <img src="images/IMG_1344.PNG" onclick="openLightbox(this.src)" alt="Bilbao Spinne">
