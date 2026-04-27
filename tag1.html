@@ -5,6 +5,27 @@
   <title>Tag 1 – Ankunft</title>
 
   <style>
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 20px;
+}
+
+@media (max-width: 700px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+    
+.gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+    
     body {
       font-family: Arial;
       margin: 0;
@@ -38,7 +59,14 @@
   <div class="container">
     <h1>Tag 1 – Ankunft</h1>
 
-    <img src="images/IMG_1344.PNG" alt="Bilbao">
+  <div class="gallery">
+  <img src="images/IMG_1344.PNG" alt="Bilbao Spinne">
+  <img src="images/IMG_3966.jpeg" alt="Reisebild">
+  <img src="images/IMG_3967.jpeg" alt="Reisebild">
+  <img src="images/IMG_3968.jpeg" alt="Reisebild">
+  <img src="images/IMG_3970.jpeg" alt="Reisebild">
+  <img src="images/IMG_3974.jpeg" alt="Reisebild">
+</div>
 
     <p>
       Ankunft in Bilbao. Erste Eindrücke, riesige Spinne 😄  
