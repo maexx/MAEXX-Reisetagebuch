@@ -49,6 +49,17 @@ nav a:hover {
 
 </head>
 
+<script>
+function openLightbox(src) {
+  document.getElementById("lightbox").style.display = "block";
+  document.getElementById("lightbox-img").src = src;
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
+  
 <body>
 
   <nav>
@@ -70,6 +81,12 @@ nav a:hover {
     <h2>📍 Route</h2>
 <p><strong>Bilbao → Arotzteki</strong></p>
   <p>🚴 ca. 145 km · erste Etappe</p>
+
+<div id="lightbox" onclick="closeLightbox()" style="display:none;">
+  <span style="position:absolute; top:20px; right:30px; color:white; font-size:40px;">&times;</span>
+  <img id="lightbox-img" style="max-width:90%; max-height:90%; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);">
+</div>
+    
 
 <img src="images/IMG_1352.jpeg" onclick="openLightbox(this.src)" alt="Route">
 </div>
