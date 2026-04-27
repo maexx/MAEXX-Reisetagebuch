@@ -7,6 +7,38 @@
   <style>
 
 .gallery img {
+  cursor: pointer;
+}
+
+#lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+}
+    
+
+.gallery img {
   transition: transform 0.2s;
 }
 
@@ -60,25 +92,41 @@
     }
   </style>
 
-<div class="gallery">
-  <a href="images/IMG_1344.PNG"><img src="images/IMG_1344.PNG"></a>
-  <a href="images/IMG_3966.jpeg"><img src="images/IMG_3966.jpeg"></a>
-  <a href="images/IMG_3967.jpeg"><img src="images/IMG_3967.jpeg"></a>
-  <a href="images/IMG_3968.jpeg"><img src="images/IMG_3968.jpeg"></a>
-  <a href="images/IMG_3970.jpeg"><img src="images/IMG_3970.jpeg"></a>
-  <a href="images/IMG_3974.jpeg"><img src="images/IMG_3974.jpeg"></a>
-</div>
+
 
   
 </head>
 
+<script>
+function openLightbox(src) {
+  document.getElementById("lightbox").style.display = "flex";
+  document.getElementById("lightbox-img").src = src;
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
+  
 <body>
 
   <div class="container">
     <h1>Tag 1 – Ankunft</h1>
 
  
+<div class="gallery">
+  <img src="images/IMG_1344.PNG" onclick="openLightbox(this.src)" alt="Bilbao Spinne">
+  <img src="images/IMG_3966.jpeg" onclick="openLightbox(this.src)" alt="Reisebild">
+  <img src="images/IMG_3967.jpeg" onclick="openLightbox(this.src)" alt="Reisebild">
+  <img src="images/IMG_3968.jpeg" onclick="openLightbox(this.src)" alt="Reisebild">
+  <img src="images/IMG_3970.jpeg" onclick="openLightbox(this.src)" alt="Reisebild">
+  <img src="images/IMG_3974.jpeg" onclick="openLightbox(this.src)" alt="Reisebild">
+</div>
 
+<div id="lightbox" onclick="closeLightbox()">
+  <span class="close">&times;</span>
+  <img id="lightbox-img">
+</div>
     <p>
       Ankunft in Bilbao. Erste Eindrücke, riesige Spinne 😄  
       Stadt wirkt entspannt, Wetter etwas grau.
