@@ -103,7 +103,14 @@ function prevImage() {
   <img id="lightbox-img">
   <span class="next" onclick="event.stopPropagation(); nextImage()">❯</span>
 </div>
+<div id="lightbox" onclick="closeLightbox()">
+  <span class="close">&times;</span>
+  <span class="prev" onclick="event.stopPropagation(); prevImage()">❮</span>
+  <img id="lightbox-img">
+  <span class="next" onclick="event.stopPropagation(); nextImage()">❯</span>
+</div>
 
+<script src="script.js"></script>
 <script src="script.js"></script>  
 </body>
 </html>
