@@ -1,85 +1,57 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tag 2 – Pyrénées-Atlantiques </title>
-
-<link rel="stylesheet" href="style.css">
-
+  <title>Tag 2 – Pyrénées-Atlantiques</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<script>
-function openLightbox(src) {
-  document.getElementById("lightbox").style.display = "block";
-  document.getElementById("lightbox-img").src = src;
-}
-
-function closeLightbox() {
-  document.getElementById("lightbox").style.display = "none";
-}
-</script>
-  
 <body>
 
-<script src="script.js"></script>
-  
   <nav>
     <a href="index.html">Start</a>
     <a href="tag1.html">Tag 1</a>
     <a href="tag2.html">Tag 2</a>
-     <a href="tag3.html">Tag 3</a>
+    <a href="tag3.html">Tag 3</a>
     <a href="tag4.html">Tag 4</a>
-    </nav>
+  </nav>
 
+  <div class="container">
 
-  
-<p>⛰️ erste Etappe</p>
-  <p>📍 Bilbao → Arotzteki</p>
-  <p>🚴 145 km · 2300 Hm</p>
-  
-<div class="route">
-  <h2>📍 Route</h2>
-  <p><strong>Bilbao → Arotzteki</strong></p>
-  <p>🚴 145 km · 2300 Hm · erste Etappe</p>
+    <h1>Tag 2 – Pyrénées-Atlantiques</h1>
 
-  <img src="images/IMG_1352.jpeg" onclick="openLightbox(this.src)" alt="Route">
-</div>
+    <div class="route">
+      <h2>📍 Route</h2>
+      <p><strong>Bilbao → Arotzteki</strong></p>
+      <p>🚴 145 km · 2300 Hm · erste Etappe</p>
 
-<h2>📸 Bilder des Tages</h2>
+      <img src="images/IMG_1352.jpeg" onclick="openLightbox(this.src)" alt="Route">
+    </div>
 
-<div class="gallery">
-  <img src="images/IMG_3976-compressed.jpeg" onclick="openLightbox(this.src)">
-  <img src="images/IMG_3977-compressed.jpeg" onclick="openLightbox(this.src)">
-  <img src="images/IMG_3978-compressed.jpeg" onclick="openLightbox(this.src)">
-  <img src="images/IMG_3979-compressed.jpeg" onclick="openLightbox(this.src)">
-  <img src="images/IMG_3980-compressed.jpeg" onclick="openLightbox(this.src)">
-  <img src="images/IMG_3981-compressed.jpeg" onclick="openLightbox(this.src)">
-  <img src="images/IMG_3982-compressed.jpeg" onclick="openLightbox(this.src)">
-  <img src="images/IMG_3983-compressed.jpeg" onclick="openLightbox(this.src)">
-  <img src="images/IMG_3984-compressed.jpeg" onclick="openLightbox(this.src)">
-</div>
+    <h2>📸 Bilder des Tages</h2>
 
+    <div class="gallery">
+      <img src="images/IMG_3976-compressed.jpeg" onclick="openLightbox(this.src)">
+      <img src="images/IMG_3977-compressed.jpeg" onclick="openLightbox(this.src)">
+      <img src="images/IMG_3978-compressed.jpeg" onclick="openLightbox(this.src)">
+      <img src="images/IMG_3979-compressed.jpeg" onclick="openLightbox(this.src)">
+      <img src="images/IMG_3980-compressed.jpeg" onclick="openLightbox(this.src)">
+      <img src="images/IMG_3981-compressed.jpeg" onclick="openLightbox(this.src)">
+      <img src="images/IMG_3982-compressed.jpeg" onclick="openLightbox(this.src)">
+      <img src="images/IMG_3983-compressed.jpeg" onclick="openLightbox(this.src)">
+      <img src="images/IMG_3984-compressed.jpeg" onclick="openLightbox(this.src)">
+    </div>
 
+  </div>
 
+  <div id="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <span class="prev" onclick="event.stopPropagation(); prevImage()">❮</span>
+    <img id="lightbox-img">
+    <span class="next" onclick="event.stopPropagation(); nextImage()">❯</span>
+  </div>
 
+  <script src="script.js"></script>
 
-
-    
-<div id="lightbox" onclick="closeLightbox()" style="display:none;">
-  <span style="position:absolute; top:20px; right:30px; color:white; font-size:40px;">&times;</span>
-  <img id="lightbox-img" style="max-width:90%; max-height:90%; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);">
-</div>
-    
-
-<img src="images/IMG_1352.jpeg" onclick="openLightbox(this.src)" alt="Route">
-</div>
-
-<div id="lightbox" onclick="closeLightbox()" style="display:none;">
-  <span style="position:absolute; top:20px; right:30px; color:white; font-size:40px;">&times;</span>
-  <img id="lightbox-img" style="max-width:90%; max-height:90%; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);">
-</div>
-
-  
 </body>
 </html>
 
